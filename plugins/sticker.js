@@ -18,10 +18,9 @@ stiker = await createSticker(img, false, packname || global.packname, author || 
 let img = await q.download?.()
 stiker = await mp4ToWebp(img, { pack: packname || global.packname, author: author || global.author })
 } else if (args[0] && isUrl(args[0])) {
-stiker = await createSticker(false, args[0], '', author, 20)
-} else throw `*رجاء قم بالاشارة للصورة التي تريد أن تحولها لملصق و اكتب الامر *.sticker* ${usedPrefix + command}*`
+stiker = await createSticker(false, args[0], '', author, 20)  *.sticker* ${usedPrefix + command}*`
 } catch {
-stiker = 'رجاء قم بالاشارة للصورة التي تريد أن تحولها لملصق و اكتب الامر \n *.sticker*'	
+stiker = ' \n *.s*'	
 } finally {
 m.reply(stiker)}}
 handler.help = ['sfull']
